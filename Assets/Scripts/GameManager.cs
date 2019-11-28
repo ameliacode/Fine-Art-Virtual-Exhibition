@@ -101,7 +101,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        ChangeState(SoundState.TITLE);
+        ChangeState(GameState.LIGHT_EMPIRE, SoundState.TITLE);
     }
 
     void Update()

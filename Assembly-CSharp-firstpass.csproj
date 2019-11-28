@@ -315,6 +315,9 @@
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/Users/Yeon/Desktop/Fine_Art_Virtual_Exhibition/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>C:/Users/Yeon/Desktop/Fine_Art_Virtual_Exhibition/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
     </Reference>

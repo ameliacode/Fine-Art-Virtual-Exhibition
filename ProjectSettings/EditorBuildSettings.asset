@@ -6,18 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/00.FAVE.unity
+    path: Assets/Scenes/00.TITLE.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/01.LISTENING_ROOM.unity
+    path: Assets/Scenes/01.FAVE.unity
+    guid: 16bf2a1e333f3b64cab56c65d7c63bd5
+  - enabled: 1
+    path: Assets/Scenes/02.LISTENING_ROOM.unity
     guid: a8f26acbad7016642871f6367397546e
   - enabled: 1
-    path: Assets/Scenes/02.PERSONAL_VALUE.unity
+    path: Assets/Scenes/03.PERSONAL_VALUE.unity
     guid: 1084722c6c95d1c48a9b32e0885590b0
   - enabled: 1
-    path: Assets/Scenes/03.LIGHT_EMPIRE_MAN.unity
+    path: Assets/Scenes/04.LIGHT_EMPIRE_MAN.unity
     guid: 3e17a6a9635ee1243a9d80669e125896
   - enabled: 1
-    path: Assets/Scenes/04.PYRENEES_CASTLE.unity
+    path: Assets/Scenes/05.PYRENEES_CASTLE.unity
     guid: db680e4d5b8062844bbf3ec5816f2ca1
   m_configObjects: {}
