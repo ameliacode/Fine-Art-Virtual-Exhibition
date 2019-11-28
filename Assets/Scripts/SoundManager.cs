@@ -15,16 +15,15 @@ public class SoundManager : Singleton <SoundManager>
 
     public override void Awake()
     {
-
         gameManager = GameManager.Instance;
         gameManager.OnSoundStateChange += HandleOnSoundStateChange;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
     {
         this.GetComponent<AudioSource>().mute = false;
         MusicAudioSource.GetComponent<AudioSource>().mute = false;
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public void HandleOnSoundStateChange()

@@ -38,7 +38,7 @@
 	SubShader
 	{
 		LOD 300
-		Tags {"RenderType"="Transparent" "Queue"="Transparent+21" "PerformanceChecks"="False" "IgnoreProjector"="True" "ForceNoShadowCasting"="True"}
+		Tags {"RenderType"="Transparent" "Queue"="Transparent" "PerformanceChecks"="False" "IgnoreProjector"="True" "ForceNoShadowCasting"="True"}
 
 		/////////////////////////////////////////////////////////////////////////////////////////////
 		// Grab Refraction

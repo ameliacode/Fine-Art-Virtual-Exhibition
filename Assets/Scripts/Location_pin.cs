@@ -9,6 +9,7 @@ public class Location_pin : MonoBehaviour
     float direction;
     float width;
     float velocity;
+
     void Start()
     {
         currentPosition = transform.position;
@@ -20,7 +21,27 @@ public class Location_pin : MonoBehaviour
     void Update()
     {
         runningTime += Time.deltaTime;
-        direction = width *  Mathf.Sin(runningTime * velocity);
-       this.transform.position = new Vector3(currentPosition.x, currentPosition.y + direction , currentPosition.z);
+        direction = width * Mathf.Sin(runningTime * velocity);
+        this.transform.position = new Vector3(currentPosition.x, currentPosition.y + direction, currentPosition.z);
+    }
+
+    public void goListeningRoom()
+    {
+        GameManager.Instance.ChangeState(GameManager.GameState.LISTENING_ROOM);
+    }
+
+    public void goPersonalValue()
+    {
+        GameManager.Instance.ChangeState(GameManager.GameState.PERSONAL_VALUE);
+    }
+
+    public void goLightMan()
+    {
+        GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE_MAN);
+    }
+
+    public void goPyreneeCatsle()
+    {
+        GameManager.Instance.ChangeState(GameManager.GameState.PYRENEE_CATSLE);
     }
 }

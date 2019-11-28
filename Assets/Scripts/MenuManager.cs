@@ -11,10 +11,6 @@ public class MenuManager : Singleton<MenuManager>
     {
         gameManager = GameManager.Instance;
         gameManager.OnGameStateChange += OnGameStateChangeHandler;
-    }
-
-    private void Start()
-    {
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -25,19 +21,19 @@ public class MenuManager : Singleton<MenuManager>
         switch (gameManager.GetCurrentGameState())
         {
             case GameManager.GameState.LIGHT_EMPIRE:
-                SceneManager.LoadScene("FAVE");
-                break;
-            case GameManager.GameState.LIGHT_EMPIRE_MAN:
-                SceneManager.LoadScene("LIGHT_EMPIRE_MAN");
+                SceneManager.LoadScene("00.FAVE");
                 break;
             case GameManager.GameState.LISTENING_ROOM:
-                SceneManager.LoadScene("LISTENING_ROOM");
+                SceneManager.LoadScene("01.LISTENING_ROOM");
                 break;
             case GameManager.GameState.PERSONAL_VALUE:
-                SceneManager.LoadScene("PERSONAL_VALUE");
+                SceneManager.LoadScene("02.PERSONAL_VALUE");
+                break;
+            case GameManager.GameState.LIGHT_EMPIRE_MAN:
+                SceneManager.LoadScene("03.LIGHT_EMPIRE_MAN");
                 break;
             case GameManager.GameState.PYRENEE_CATSLE:
-                SceneManager.LoadScene("PYRENEE_CATSLE");
+                SceneManager.LoadScene("04.PYRENEES_CASTLE");
                 break;
             default:
                 break;

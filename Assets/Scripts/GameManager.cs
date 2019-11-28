@@ -93,6 +93,8 @@ public class GameManager : Singleton<GameManager>
             context = currentActivity.Call<AndroidJavaObject>("getApplicationContext");
         }
 #endif
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Use this for initialization
@@ -100,7 +102,6 @@ public class GameManager : Singleton<GameManager>
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         ChangeState(SoundState.TITLE);
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update()

@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9d9808b788d4163418a135e4b178fd32, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -97,13 +97,13 @@ Material:
     - _Parallax: 0.02
     - _ReflectIntensity: 0.205
     - _RenderMode: 0
-    - _RimIntensity: 0.406
-    - _RimSize: 3.75
+    - _RimIntensity: 0.3
+    - _RimSize: 4.5
     - _ShadowIntensity: 0.1
-    - _Shininess: 0.169
+    - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpecularIntensity: 1.256
+    - _SpecularIntensity: 2
     - _SrcBlend: 1
     - _TranslucentIntensity: 0.5
     - _TranslucentShininess: 0.275
@@ -117,7 +117,7 @@ Material:
     m_Colors:
     - _Color: {r: 0, g: 0.5058824, b: 0.5020502, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0.5}

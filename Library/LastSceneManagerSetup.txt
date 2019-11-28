@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/FAVE.unity
+- path: Assets/Scenes/00.FAVE.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
