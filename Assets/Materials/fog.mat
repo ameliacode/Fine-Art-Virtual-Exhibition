@@ -76,7 +76,7 @@ Material:
     - _ScrollDirY: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 1
+    - _Speed: 0.3
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

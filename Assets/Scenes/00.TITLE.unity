@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 1185992470}
   - component: {fileID: 1185992472}
   - component: {fileID: 1185992471}
+  - component: {fileID: 1185992473}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -214,7 +215,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicAudioSource: {fileID: 1185992472}
   SoundEffectAudioSource: {fileID: 1703755059}
-  title: {fileID: 8300000, guid: 4a24065f4e46f4f42b9d7d0eefbc0bda, type: 3}
+  fave: {fileID: 8300000, guid: 4a24065f4e46f4f42b9d7d0eefbc0bda, type: 3}
+  listeningRoom: {fileID: 8300000, guid: 9144569997e902c4898effc3bf4b1692, type: 3}
+  personalValue: {fileID: 8300000, guid: de09ed2ae6aced84b9e9656fef1a00d0, type: 3}
+  lightEmpire: {fileID: 8300000, guid: 7a008ccad6bfcc04eacb09cd90a07e41, type: 3}
+  castle: {fileID: 8300000, guid: af0c817536af73c4a8db6e654588629b, type: 3}
   move1: {fileID: 8300000, guid: 72cac2b5302f7fb4fa297f068cc1ae32, type: 3}
   move2: {fileID: 8300000, guid: d349688d137ab1f4f9099a9150a7166e, type: 3}
   indoor_move: {fileID: 8300000, guid: e7e9d45a7b1ac6f429be823074f5528f, type: 3}
@@ -316,6 +321,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &1185992473
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185992469}
+  m_Enabled: 1
 --- !u!1 &1703755056
 GameObject:
   m_ObjectHideFlags: 0

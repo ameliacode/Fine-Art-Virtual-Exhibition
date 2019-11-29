@@ -10,7 +10,11 @@ public class SoundManager : Singleton <SoundManager>
     public AudioSource MusicAudioSource;
     public AudioSource SoundEffectAudioSource;
 
-    public AudioClip title;
+    public AudioClip fave;
+    public AudioClip listeningRoom;
+    public AudioClip personalValue;
+    public AudioClip lightEmpire;
+    public AudioClip castle;
     public AudioClip move1;
     public AudioClip move2;
     public AudioClip indoor_move;
@@ -35,8 +39,20 @@ public class SoundManager : Singleton <SoundManager>
         switch (gameManager.GetCurrentSoundState())
         {
 
-            case GameManager.SoundState.TITLE:
-                titleSound();
+            case GameManager.SoundState.LIGHT_EMPIRE:
+                LESound();
+                break;
+            case GameManager.SoundState.LIGHT_EMPIRE_MAN:
+                LEMSound();
+                break;
+            case GameManager.SoundState.PERSONAL_VALUE:
+                PVSound();
+                break;
+            case GameManager.SoundState.LISTENING_ROOM:
+                LRSound();
+                break;
+            case GameManager.SoundState.PYRENEE_CATSLE:
+                PCSound();
                 break;
             case GameManager.SoundState.MOVE1:
                 moveSound1();
@@ -111,9 +127,37 @@ public class SoundManager : Singleton <SoundManager>
         this.GetComponent<AudioSource>().Play();
     }
 
-    private void titleSound()
+    private void LESound()
     {
-        this.GetComponent<AudioSource>().clip = title;
+        this.GetComponent<AudioSource>().clip = fave;
+        this.GetComponent<AudioSource>().loop = true;
+        this.GetComponent<AudioSource>().Play();
+    }
+
+    private void LEMSound()
+    {
+        this.GetComponent<AudioSource>().clip = lightEmpire;
+        this.GetComponent<AudioSource>().loop = true;
+        this.GetComponent<AudioSource>().Play();
+    }
+
+    private void PVSound()
+    {
+        this.GetComponent<AudioSource>().clip = personalValue;
+        this.GetComponent<AudioSource>().loop = true;
+        this.GetComponent<AudioSource>().Play();
+    }
+
+    private void LRSound()
+    {
+        this.GetComponent<AudioSource>().clip = listeningRoom;
+        this.GetComponent<AudioSource>().loop = true;
+        this.GetComponent<AudioSource>().Play();
+    }
+
+    private void PCSound()
+    {
+        this.GetComponent<AudioSource>().clip = castle;
         this.GetComponent<AudioSource>().loop = true;
         this.GetComponent<AudioSource>().Play();
     }

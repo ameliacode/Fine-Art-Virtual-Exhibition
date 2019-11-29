@@ -15,7 +15,11 @@ public class GameManager : Singleton<GameManager>
 
     public enum SoundState
     {
-        TITLE,
+        LIGHT_EMPIRE,
+        LIGHT_EMPIRE_MAN,
+        PERSONAL_VALUE,
+        LISTENING_ROOM,
+        PYRENEE_CATSLE,
         MOVE1,
         MOVE2,
         INDOOR_MOVE,
@@ -106,7 +110,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        ChangeState(GameState.LIGHT_EMPIRE, SoundState.TITLE);
+        ChangeState(GameState.LIGHT_EMPIRE, SoundState.LIGHT_EMPIRE);
     }
 
     void Update()
