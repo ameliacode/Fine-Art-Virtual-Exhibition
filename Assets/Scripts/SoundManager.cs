@@ -8,10 +8,14 @@ public class SoundManager : Singleton <SoundManager>
 
     private GameManager gameManager;
     public AudioSource MusicAudioSource;
+    public AudioSource SoundEffectAudioSource;
 
     public AudioClip title;
-    public AudioClip move;
-    public AudioClip door;
+    public AudioClip move1;
+    public AudioClip move2;
+    public AudioClip indoor_move;
+    public AudioClip door_open;
+    public AudioClip windy;
 
     public override void Awake()
     {
@@ -34,11 +38,26 @@ public class SoundManager : Singleton <SoundManager>
             case GameManager.SoundState.TITLE:
                 titleSound();
                 break;
-            case GameManager.SoundState.MOVE:
-                moveSound();
+            case GameManager.SoundState.MOVE1:
+                moveSound1();
                 break;
-            case GameManager.SoundState.DOOR:
+            case GameManager.SoundState.MOVE2:
+                moveSound2();
+                break;
+            case GameManager.SoundState.INDOOR_MOVE:
+                indoorMoveSound();
+                break;
+            case GameManager.SoundState.DOOR_OPEN:
                 doorSound();
+                break;
+            case GameManager.SoundState.WINDY:
+                windySound();
+                break;
+            case GameManager.SoundState.UNMUTESOUND_EFFECT:
+                UnMuteSoundEffect();
+                break;
+            case GameManager.SoundState.MUTESOUND_EFFECT:
+                MuteSoundEffect();
                 break;
             case GameManager.SoundState.UNMUTESOUND:
                 UnMuteSound();
@@ -106,18 +125,50 @@ public class SoundManager : Singleton <SoundManager>
 
     private void doorSound()
     {
-        this.GetComponent<AudioSource>().PlayOneShot(door);
+        this.GetComponent<AudioSource>().PlayOneShot(door_open);
     }
 
-    private void moveSound()
+    private void windySound()
     {
-        this.GetComponent<AudioSource>().PlayOneShot(move);
+        if (!SoundEffectAudioSource.isPlaying)
+            SoundEffectAudioSource.PlayOneShot(windy);
+    }
+
+    private void moveSound1()
+    {
+        UnMuteSoundEffect();
+        if (!SoundEffectAudioSource.isPlaying)
+            SoundEffectAudioSource.PlayOneShot(move1);
+    }
+
+    private void moveSound2()
+    {
+        UnMuteSoundEffect();
+        if (!SoundEffectAudioSource.isPlaying)
+            SoundEffectAudioSource.PlayOneShot(move2);
+    }
+
+    private void indoorMoveSound()
+    {
+        UnMuteSoundEffect();
+        if (!SoundEffectAudioSource.isPlaying)
+            SoundEffectAudioSource.PlayOneShot(indoor_move);
     }
 
     private void None()
     {
         StopAllCoroutines();
         this.GetComponent<AudioSource>().Stop();
+    }
+
+    private void MuteSoundEffect()
+    {
+        SoundEffectAudioSource.GetComponent<AudioSource>().mute = true;
+    }
+
+    private void UnMuteSoundEffect()
+    {
+        SoundEffectAudioSource.GetComponent<AudioSource>().mute = false;
     }
 
     private void MuteSound()

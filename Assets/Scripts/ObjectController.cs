@@ -32,12 +32,9 @@ namespace GoogleVR.HelloVR
 
         /// <summary>The material to use when this object is active (gazed at).</summary>
         public Material gazedAtMaterial;
-        public string state;
-        public bool isGazed;
 
         private Vector3 startingPosition;
         private Renderer myRenderer;
-        private float Timer = 2.0f;
 
         /// <summary>Sets this instance's GazedAt state.</summary>
         /// <param name="gazedAt">
@@ -48,41 +45,7 @@ namespace GoogleVR.HelloVR
             if (inactiveMaterial != null && gazedAtMaterial != null)
             {
                 myRenderer.material = gazedAt ? gazedAtMaterial : inactiveMaterial;
-                isGazed = gazedAt;
                 return;
-            }
-        }
-
-        private void Update()
-        {
-            if (isGazed)
-            {
-                Timer = Timer - Time.deltaTime;
-               // Debug.Log(Timer);
-            }
-            else
-                Timer = 2.0f;
-
-            if (Timer <= 0)
-            {
-                switch (state)
-                {
-                    case "FAVE":
-                        GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE);
-                        break;
-                    case "LISTENING_ROOM":
-                        GameManager.Instance.ChangeState(GameManager.GameState.LISTENING_ROOM);
-                        break;
-                    case "PERSONAL_VALUE":
-                        GameManager.Instance.ChangeState(GameManager.GameState.PERSONAL_VALUE);
-                        break;
-                    case "LIGHT_EMPIRE_MAN":
-                        GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE_MAN);
-                        break;
-                    case "PYRENEE_CATSLE":
-                        GameManager.Instance.ChangeState(GameManager.GameState.PYRENEE_CATSLE);
-                        break;
-                }
             }
         }
 

@@ -16,10 +16,15 @@ public class GameManager : Singleton<GameManager>
     public enum SoundState
     {
         TITLE,
-        MOVE,
-        DOOR,
+        MOVE1,
+        MOVE2,
+        INDOOR_MOVE,
+        DOOR_OPEN,
+        WINDY,
         UNMUTESOUND,
         MUTESOUND,
+        UNMUTESOUND_EFFECT,
+        MUTESOUND_EFFECT,
         NONE
     };
 

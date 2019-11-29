@@ -28,7 +28,14 @@ public class VRAutowalk : MonoBehaviour
         {
             Vector3 forward = vrHead.TransformDirection(Vector3.forward);
             controller.SimpleMove(forward * speed);
+
+            if (Random.Range(0, 1) == 0)
+                GameManager.Instance.ChangeState(GameManager.SoundState.MOVE1);
+            else
+                GameManager.Instance.ChangeState(GameManager.SoundState.MOVE2);
         }
+        else
+            GameManager.Instance.ChangeState(GameManager.SoundState.MUTESOUND_EFFECT);
     }
 
     public void Info()
