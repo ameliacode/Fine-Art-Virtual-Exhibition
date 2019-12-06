@@ -25,6 +25,11 @@ public class Location_pin : MonoBehaviour
         this.transform.position = new Vector3(currentPosition.x, currentPosition.y + direction, currentPosition.z);
     }
 
+    public void goFAVE()
+    {
+        GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE, GameManager.SoundState.LIGHT_EMPIRE);
+    }
+
     public void goListeningRoom()
     {
         GameManager.Instance.ChangeState(GameManager.GameState.LISTENING_ROOM);

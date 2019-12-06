@@ -175,18 +175,6 @@ public enum GvrControllerHand
 public class GvrControllerInput : MonoBehaviour
 {
     /// <summary>Indicates how to connect to the controller emulator.</summary>
-#if UNITY_EDITOR
-    [GvrInfo("Hold Shift to use the Mouse as the dominant controller.\n\n" +
-             "Controls:  Shift +\n" +
-             "   • Move Mouse = Change Orientation\n" +
-             "   • Left Mouse Button = ClickButton\n" +
-             "   • Right Mouse Button = AppButton\n" +
-             "   • Middle Mouse Button = HomeButton/Recenter\n" +
-             "   • Ctrl = IsTouching\n" +
-             "   • Ctrl + Move Mouse = Change TouchPos", 8, UnityEditor.MessageType.None)]
-    [Tooltip("How to connect to the emulator: USB cable (recommended) or WIFI.")]
-    [GvrInfo("Controller Emulator is now Deprecated", 2, UnityEditor.MessageType.Warning)]
-#endif  // UNITY_EDITOR
     public EmulatorConnectionMode emulatorConnectionMode = EmulatorConnectionMode.USB;
 
     private static GvrControllerInputDevice[] instances = new GvrControllerInputDevice[0];

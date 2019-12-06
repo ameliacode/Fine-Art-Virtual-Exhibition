@@ -34,7 +34,6 @@ public class GvrEditorEmulator : MonoBehaviour
     // gets applied after LateUpdate has occured. However, any functionality that
     // queries the camera pose during Update or LateUpdate after GvrEditorEmulator has been
     // updated will get the wrong value applied by GvrEditorEmulator intsead.
-#if UNITY_EDITOR
     private const string AXIS_MOUSE_X = "Mouse X";
     private const string AXIS_MOUSE_Y = "Mouse Y";
 
@@ -90,18 +89,13 @@ public class GvrEditorEmulator : MonoBehaviour
     /// <remarks>Should be called in one MonoBehavior's `Update` method.</remarks>
     public void UpdateEditorEmulation()
     {
-        if (InstantPreview.IsActive)
-        {
-            return;
-        }
-
         if (GvrControllerInput.Recentered)
         {
             Recenter();
         }
 
         bool rolled = false;
-        if (CanChangeYawPitch())
+       // if (CanChangeYawPitch())
         {
             GvrCursorHelper.HeadEmulationActive = true;
             mouseX += Input.GetAxis(AXIS_MOUSE_X) * 5;
@@ -117,17 +111,14 @@ public class GvrEditorEmulator : MonoBehaviour
             mouseY -= Input.GetAxis(AXIS_MOUSE_Y) * 2.4f;
             mouseY = Mathf.Clamp(mouseY, -85, 85);
         }
-        else if (CanChangeRoll())
+        if (CanChangeRoll())
         {
             GvrCursorHelper.HeadEmulationActive = true;
             rolled = true;
             mouseZ += Input.GetAxis(AXIS_MOUSE_X) * 5;
             mouseZ = Mathf.Clamp(mouseZ, -85, 85);
         }
-        else
-        {
-            GvrCursorHelper.HeadEmulationActive = false;
-        }
+
 
         if (!rolled)
         {
@@ -183,10 +174,6 @@ public class GvrEditorEmulator : MonoBehaviour
         // This guarantees that GvrEditorEmulator is updated before anything else responds to
         // controller input, which ensures that re-centering works correctly in the editor.
         // If GvrControllerInput is not available, then fallback to using Update().
-        if (GvrControllerInput.ApiStatus != GvrControllerApiStatus.Error)
-        {
-            return;
-        }
 
         UpdateEditorEmulation();
     }
@@ -256,5 +243,4 @@ public class GvrEditorEmulator : MonoBehaviour
         Camera.GetAllCameras(allCameras);
     }
 
-#endif  // UNITY_EDITOR
 }
