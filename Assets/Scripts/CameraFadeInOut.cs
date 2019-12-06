@@ -20,15 +20,15 @@ public class CameraFadeInOut : MonoBehaviour
         }
     }
 
-    void fadeOutAni(float delay)
+    public void fadeOutAni(float delay)
     {
-        iTween.ValueTo(gameObject, iTween.Hash("from", CurrentOpacity(), "to", 0.0f, "delay", delay, "easetype", iTween.EaseType.easeInOutCubic, "onupdate", "OnUpdateOpacity", "time", 1.0f, "oncomplete", "fadeAniComplete"));
+        iTween.ValueTo(gameObject, iTween.Hash("from", 1.0f, "to", 0.0f, "delay", delay, "easetype", iTween.EaseType.easeInOutCubic, "onupdate", "OnUpdateOpacity", "time", 1.0f, "oncomplete", "fadeAniComplete"));
     }
 
 
-    void fadeInAni(float delay)
+    public void fadeInAni(float delay)
     {
-        iTween.ValueTo(gameObject, iTween.Hash("from", CurrentOpacity(), "to", 1.0f, "delay", delay, "easetype", iTween.EaseType.easeInOutCubic, "onupdate", "OnUpdateOpacity", "time", 1.0f, "oncomplete", "fadeAniComplete"));
+        iTween.ValueTo(gameObject, iTween.Hash("from", 0.0f, "to", 1.0f, "delay", delay, "easetype", iTween.EaseType.easeInOutCubic, "onupdate", "OnUpdateOpacity", "time", 1.0f, "oncomplete", "fadeAniComplete"));
     }
 
     float CurrentOpacity()
@@ -42,12 +42,12 @@ public class CameraFadeInOut : MonoBehaviour
 
     void fadeAniComplete()
     {
-        this.gameObject.transform.parent.gameObject.SetActive(false);
+        Destroy(this.gameObject.transform.parent.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

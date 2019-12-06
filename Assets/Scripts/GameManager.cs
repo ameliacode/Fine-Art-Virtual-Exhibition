@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
         PERSONAL_VALUE,
         LISTENING_ROOM,
         PYRENEE_CATSLE,
+        ENDING,
         NONE
     };
 
@@ -42,7 +43,6 @@ public class GameManager : Singleton<GameManager>
     public GameState nextGameState = GameState.NONE;
 
     private SoundState currentSoundState = SoundState.NONE;
-
     public delegate void OnGameStateChangeHandler();
     public delegate void OnSoundStateChangeHandler();
 
@@ -109,6 +109,7 @@ public class GameManager : Singleton<GameManager>
     // Use this for initialization
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         ChangeState(GameState.LIGHT_EMPIRE, SoundState.LIGHT_EMPIRE);
     }

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/05.PYRENEES_CASTLE.unity
     guid: db680e4d5b8062844bbf3ec5816f2ca1
+  - enabled: 1
+    path: Assets/Scenes/06.ENDING.unity
+    guid: 49461c1c74530f8468dc4d7c22c5757a
   m_configObjects: {}

@@ -18,6 +18,7 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 /// <summary>Controls interactable teleporting objects in the Demo scene.</summary>
 [RequireComponent(typeof(Collider))]
@@ -48,8 +49,11 @@ public class FaveObjectController : MonoBehaviour
         {
             myRenderer.material = gazedAt ? gazedAtMaterial : inactiveMaterial;
             isGazed = gazedAt;
+
             if (walk != null)
                 walk.moveForward = !isGazed;
+
+            // if(isGazed) switchScene();
             return;
         }
     }
@@ -66,24 +70,34 @@ public class FaveObjectController : MonoBehaviour
 
         if (Timer <= 0)
         {
-            switch (state)
-            {
-                case "FAVE":
-                    GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE, GameManager.SoundState.LIGHT_EMPIRE);
-                    break;
-                case "LISTENING_ROOM":
-                    GameManager.Instance.ChangeState(GameManager.GameState.LISTENING_ROOM, GameManager.SoundState.LISTENING_ROOM);
-                    break;
-                case "PERSONAL_VALUE":
-                    GameManager.Instance.ChangeState(GameManager.GameState.PERSONAL_VALUE, GameManager.SoundState.PERSONAL_VALUE);
-                    break;
-                case "LIGHT_EMPIRE_MAN":
-                    GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE_MAN, GameManager.SoundState.LIGHT_EMPIRE_MAN);
-                    break;
-                case "PYRENEE_CATSLE":
-                    GameManager.Instance.ChangeState(GameManager.GameState.PYRENEE_CATSLE, GameManager.SoundState.PYRENEE_CATSLE);
-                    break;
-            }
+            switchScene();
+        }
+    }
+
+    public void switchScene()
+    {
+        PlayerPrefs.SetString(state, "true");
+
+        switch (state)
+        {
+            case "FAVE":
+                GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE, GameManager.SoundState.LIGHT_EMPIRE);
+                break;
+            case "LISTENING_ROOM":
+                GameManager.Instance.ChangeState(GameManager.GameState.LISTENING_ROOM, GameManager.SoundState.LISTENING_ROOM);
+                break;
+            case "PERSONAL_VALUE":
+                GameManager.Instance.ChangeState(GameManager.GameState.PERSONAL_VALUE, GameManager.SoundState.PERSONAL_VALUE);
+                break;
+            case "LIGHT_EMPIRE_MAN":
+                GameManager.Instance.ChangeState(GameManager.GameState.LIGHT_EMPIRE_MAN, GameManager.SoundState.LIGHT_EMPIRE_MAN);
+                break;
+            case "PYRENEE_CATSLE":
+                GameManager.Instance.ChangeState(GameManager.GameState.PYRENEE_CATSLE, GameManager.SoundState.PYRENEE_CATSLE);
+                break;
+            case "ENDING":
+                GameManager.Instance.ChangeState(GameManager.GameState.ENDING, GameManager.SoundState.LIGHT_EMPIRE);
+                break;
         }
     }
 
@@ -159,5 +173,18 @@ public class FaveObjectController : MonoBehaviour
         startingPosition = transform.localPosition;
         myRenderer = GetComponent<Renderer>();
         SetGazedAt(false);
+        walk = MenuManager.Instance.Player.GetComponent<VRAutowalk>();
+
+        if (state != "FAVE")
+            if (PlayerPrefs.HasKey(state))
+                this.gameObject.SetActive(false);
+
+        if (state == "ENDING")
+        {
+            if (PlayerPrefs.HasKey("LISTENING_ROOM") && PlayerPrefs.HasKey("PERSONAL_VALUE") && PlayerPrefs.HasKey("LIGHT_EMPIRE_MAN") && PlayerPrefs.HasKey("PYRENEE_CATSLE"))
+                this.gameObject.SetActive(true);
+            else
+                this.gameObject.SetActive(false);
+        }
     }
 }

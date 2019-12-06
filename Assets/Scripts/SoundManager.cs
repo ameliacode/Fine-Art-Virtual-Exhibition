@@ -19,7 +19,6 @@ public class SoundManager : Singleton <SoundManager>
     public AudioClip move2;
     public AudioClip indoor_move;
     public AudioClip door_open;
-    public AudioClip windy;
 
     public override void Awake()
     {
@@ -65,9 +64,6 @@ public class SoundManager : Singleton <SoundManager>
                 break;
             case GameManager.SoundState.DOOR_OPEN:
                 doorSound();
-                break;
-            case GameManager.SoundState.WINDY:
-                windySound();
                 break;
             case GameManager.SoundState.UNMUTESOUND_EFFECT:
                 UnMuteSoundEffect();
@@ -170,12 +166,6 @@ public class SoundManager : Singleton <SoundManager>
     private void doorSound()
     {
         this.GetComponent<AudioSource>().PlayOneShot(door_open);
-    }
-
-    private void windySound()
-    {
-        if (!SoundEffectAudioSource.isPlaying)
-            SoundEffectAudioSource.PlayOneShot(windy);
     }
 
     private void moveSound1()

@@ -3,7 +3,97 @@ guid: daf970c71bbe6e84d9afc7892dbf38be
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road
+    second: {fileID: 2100000, guid: 91be0d65e5c668942836dd9256e7b368, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue_roof
+    second: {fileID: 2100000, guid: dde4abe66f3300e4592f386bd4a82ff2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brown_door
+    second: {fileID: 2100000, guid: a2374c2edb90fec41b4b4fa3ee805f38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chimney
+    second: {fileID: 2100000, guid: 6bc5c0a24cff54b4cad8e84bbe940c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: curtain
+    second: {fileID: 2100000, guid: 3682645ed33ffa34c98115f47a33c2d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_chimney
+    second: {fileID: 2100000, guid: f65167b9141733140abf5561800a227b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gate
+    second: {fileID: 2100000, guid: 18b6606799dc88f409cb46d69fc97c98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass_window
+    second: {fileID: 2100000, guid: 29d5945f280c70e46aa1d4dabd590fed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green_door
+    second: {fileID: 2100000, guid: aca83389cc9b72d499fb41e90cb41c35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle
+    second: {fileID: 2100000, guid: be9661545c7806a4da6d9d3942400b4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: house2_window
+    second: {fileID: 2100000, guid: fdb3e23b29efef748ad122a0c5594706, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: house_wall
+    second: {fileID: 2100000, guid: b420502d9118e7749ac7e7fe275e51f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 96dc8efa38c50bb458126a2812574f02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp_glass
+    second: {fileID: 2100000, guid: f75436ba7a49dd549a20125c95be2087, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp_pole
+    second: {fileID: 2100000, guid: 0a900033f814cae43b468dc5e17efe2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_brown
+    second: {fileID: 2100000, guid: ec627180520547643ae50212135b6dcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red_door
+    second: {fileID: 2100000, guid: 3a08008b039ca9448821f6c5b06aff53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall_bump
+    second: {fileID: 2100000, guid: 06f9edab090489d42a6c8f0c4cde7d1e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: water_material
-  m_Shader: {fileID: 4800000, guid: f332517974fe4344e90cf2fbff7a4f77, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9b20dc7cc41eabb4db5eca8ca2ce1642, type: 3}
   m_ShaderKeywords: USE_DISPLACEMENT USE_FILTERING USE_FOAM USE_MEAN_SKY_RADIANCE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -27,8 +27,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Bumpmap:
+        m_Texture: {fileID: 2800000, guid: 2f995f83a5da314489ae97b7f763a5e3, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
     - _Cube:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 8900000, guid: 6fa3f446deee84c52aec507bd0aca28c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Detail:
@@ -145,10 +149,13 @@ Material:
     - _Parallax: 0.02
     - _ParallaxScale: 1
     - _RadianceFactor: 1
+    - _Refract: 0.069
     - _RefractionIntensity: 0.19
     - _RefractionScale: 0.005
     - _RefractionSpeed: 0.51
     - _ReverseFlow: 1
+    - _SPMulti: 3.16
+    - _SPPower: 176
     - _Shininess: 0.5
     - _ShoreFade: 0.3
     - _SmoothnessTextureChannel: 0
@@ -165,9 +172,12 @@ Material:
     - _WaterClarity: 0.09
     - _WaterTransparency: 30
     - _WaveAmplitudeFactor: 0.25
+    - _WaveH: 0.139
     - _WaveIntensity: 0.76
+    - _WaveL: 12
     - _WaveScrollSpeed: 0.1
     - _WaveSteepness: 0.72
+    - _WaveT: 1
     - _WaveTiling: 0.1
     - _ZWrite: 1
     m_Colors:
@@ -181,6 +191,7 @@ Material:
     - _HorizontalExtinction: {r: 3, g: 10, b: 12, a: 1}
     - _ReflectColor: {r: 0.27999997, g: 0.28999996, b: 0.24999997, a: 0.5}
     - _RefractionValues: {r: 0.3, g: 0.01, b: 1, a: 1}
+    - _SPColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShoreColor: {r: 0.007843136, g: 0.6672275, b: 0.69803923, a: 1}
     - _SpecColor: {r: 0.08599999, g: 0.08599999, b: 0.08599999, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

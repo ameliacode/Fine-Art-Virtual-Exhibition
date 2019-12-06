@@ -12,7 +12,7 @@ public class Ending_credit : MonoBehaviour
     void Start()
     {
         currentPosition = transform.position;
-        width = 0.02f;
+        width = 20f;
         velocity = 10.0f;
     }
 

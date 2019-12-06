@@ -70,7 +70,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DetailIntensity: 1.1
+    - _DetailIntensity: 1.127
     - _DetailNormalMapScale: 1
     - _DetailScrollSpeed: 0.081
     - _DstBlend: 0
@@ -79,7 +79,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _MinuteDetailIntensity: 1.033
+    - _MinuteDetailIntensity: 1.06
     - _MinuteDetailScrollSpeed: 0.08
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -88,8 +88,8 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveIntensity: 1
-    - _WaveScrollSpeed: 0.093
+    - _WaveIntensity: 0.36
+    - _WaveScrollSpeed: 0.0797
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
