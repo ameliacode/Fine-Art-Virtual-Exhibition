@@ -1,4 +1,3 @@
-# Fine-Art-Virtual-Exhibition
 <h3 align="center">Fine Art Virtual Exhibition</h3>
 <p align="center">
     ES-Entertainment SW Media Project Capstone Design 2019
