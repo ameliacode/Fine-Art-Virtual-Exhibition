@@ -7,7 +7,7 @@
 - [Render Image](#render-image)
 - [Execution Video](#execution-video)
 - [Execution environment](#execution-environment)
-- [Artsworks](#artsworks)
+- [Artworks](#artworks)
 
 ## Render Image
 <p align="center">
@@ -25,7 +25,7 @@ https://youtu.be/7tP-TEY-DBQ
 <a href="https://unity3d.com/kr/get-unity/download/archive">Unity 2019.2.3f1 (64-bit) </a> </br>
 <a href="https://github.com/googlevr/gvr-unity-sdk/releases">GVR SDK for Unity v1.200.1 </a>
 
-## Artsworks
+## Artworks
 René Magritte - The Empire of lights (1954)</br>
 René Magritte - Personal Values (1952)</br>
 René Magritte - The Listening Room (1952)</br>
